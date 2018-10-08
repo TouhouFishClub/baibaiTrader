@@ -1,0 +1,21 @@
+{
+  "name": "BaiBaiTrader",
+  "version": "0.1.0",
+  "description": "BaiBaiTrader",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "repository": "",
+  "license": "BSD",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "",
+    "csv": "^2.0.0",
+    "express": "~4.14.0",
+    "express-ws": "",
+    "opn": "",
+    "fs-extra": "^5.0.0",
+    "https-proxy-agent": "^2.0.0",
+    "nodejs-websocket": ""
+  }
+}

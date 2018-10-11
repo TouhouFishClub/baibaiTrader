@@ -116,7 +116,7 @@ function handle(tickerdata){
       exc=true;
     }
     if(Math.abs(willsell-nowsell)/nowsell>0.05){
-      console.log('will refresh buy sell from '+nowsell+' to '+willsell);
+      console.log('will refresh sell order from '+nowsell+' to '+willsell);
       if(mem['sell']){
         var orderid = mem['sell'].id;
         cancel(orderid,symbol,function(){
@@ -273,6 +273,9 @@ function getMyOrder(symbol,callback,is_notify){
   req.on('error', function(err) {
     console.log('req err4:');
     console.log(err);
+    setTimeout(function(){
+      getMyOrder(symbol,callback,is_notify)
+    },10000);
   });
   req.write(body);
   req.end();

@@ -108,10 +108,10 @@ function handle(tickerdata){
       if(mem['buy']){
         var orderid = mem['buy'].id;
         cancel(orderid,symbol,function(){
-          trade('buy',symbol,willbuy,0.01);
+          trade('buy',symbol,willbuy,0.06);
         })
       }else{
-        trade('buy',symbol,willbuy,0.01);
+        trade('buy',symbol,willbuy,0.06);
       }
       exc=true;
     }
@@ -120,10 +120,10 @@ function handle(tickerdata){
       if(mem['sell']){
         var orderid = mem['sell'].id;
         cancel(orderid,symbol,function(){
-          trade('sell',symbol,willsell,0.01);
+          trade('sell',symbol,willsell,0.06);
         });
       }else{
-        trade('sell',symbol,willsell,0.01);
+        trade('sell',symbol,willsell,0.06);
       }
       exc=true;
     }
